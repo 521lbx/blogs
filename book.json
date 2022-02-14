@@ -1,0 +1,13 @@
+{
+    "plugins":[
+        "expandable-chapters",
+        "fontsettings",
+        "sharing",
+        "lunr",
+        "search",
+        "highlight",
+        "livereload",
+        "accordion",
+        "sectionx"
+    ]
+}

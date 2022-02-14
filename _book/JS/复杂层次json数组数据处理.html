@@ -1,0 +1,2745 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>复杂层次json数组数据处理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-accordion/accordion.css">
+                
+            
+                
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-sectionx/sectionx.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="严格模式下重复的定时器.html" />
+    
+    
+    <link rel="prev" href="base64前缀.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../待学.html">
+            
+                <a href="../待学.html">
+            
+                    
+                    待学
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../VUE/">
+            
+                <a href="../VUE/">
+            
+                    
+                    VUE
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../VUE/另类父子双向绑定.html">
+            
+                <a href="../VUE/另类父子双向绑定.html">
+            
+                    
+                    另类父子双向绑定
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../VUE/向组件动态添加子组件.html">
+            
+                <a href="../VUE/向组件动态添加子组件.html">
+            
+                    
+                    向组件动态添加子组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../VUE/自定义v-model.html">
+            
+                <a href="../VUE/自定义v-model.html">
+            
+                    
+                    自定义v-model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../VUE/将原生事件绑定到自定义组件.html">
+            
+                <a href="../VUE/将原生事件绑定到自定义组件.html">
+            
+                    
+                    将原生事件绑定到自定义组件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../VUE/计算属性vs方法vs侦听属性.html">
+            
+                <a href="../VUE/计算属性vs方法vs侦听属性.html">
+            
+                    
+                    计算属性vs方法vs侦听属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../VUE/prop相关.html">
+            
+                <a href="../VUE/prop相关.html">
+            
+                    
+                    prop相关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../VUE/$listeners、$attrs.html">
+            
+                <a href="../VUE/$listeners、$attrs.html">
+            
+                    
+                    $listeners、$attrs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../VUE/注意笔记.html">
+            
+                <a href="../VUE/注意笔记.html">
+            
+                    
+                    注意笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../VUE/slot.html">
+            
+                <a href="../VUE/slot.html">
+            
+                    
+                    slot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="../VUE/依赖注入.html">
+            
+                <a href="../VUE/依赖注入.html">
+            
+                    
+                    依赖注入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="../VUE/为字符串拼接模板绑定事件.html">
+            
+                <a href="../VUE/为字符串拼接模板绑定事件.html">
+            
+                    
+                    为字符串拼接模板绑定事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="../VUE/mixins.html">
+            
+                <a href="../VUE/mixins.html">
+            
+                    
+                    mixins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="../VUE/directive.html">
+            
+                <a href="../VUE/directive.html">
+            
+                    
+                    directive
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="../VUE/渲染函数&jsx.html">
+            
+                <a href="../VUE/渲染函数&jsx.html">
+            
+                    
+                    渲染函数&jsx
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="../VUE/过滤器filter.html">
+            
+                <a href="../VUE/过滤器filter.html">
+            
+                    
+                    过滤器filter
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="../VUE/vue模块包分析工具.html">
+            
+                <a href="../VUE/vue模块包分析工具.html">
+            
+                    
+                    vue模块包分析工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.17" data-path="../VUE/moment加载优化.html">
+            
+                <a href="../VUE/moment加载优化.html">
+            
+                    
+                    moment加载优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.18" data-path="../VUE/限制输入框只能输入保留两位小数的金额.html">
+            
+                <a href="../VUE/限制输入框只能输入保留两位小数的金额.html">
+            
+                    
+                    限制输入框只能输入保留两位小数的金额
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.19" data-path="../VUE/Long类型数据前端精度丢失.html">
+            
+                <a href="../VUE/Long类型数据前端精度丢失.html">
+            
+                    
+                    Long类型数据前端精度丢失
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.20" data-path="../VUE/切换主题vue&less&radu.html">
+            
+                <a href="../VUE/切换主题vue&less&radu.html">
+            
+                    
+                    切换主题vue&less&radui)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.21" data-path="../VUE/路由共用组件的刷新.html">
+            
+                <a href="../VUE/路由共用组件的刷新.html">
+            
+                    
+                    路由共用组件的刷新
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.22" data-path="../VUE/vue项目优化.html">
+            
+                <a href="../VUE/vue项目优化.html">
+            
+                    
+                    vue项目优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.23" data-path="../VUE/动态为对象添加多个响应式属性.html">
+            
+                <a href="../VUE/动态为对象添加多个响应式属性.html">
+            
+                    
+                    动态为对象添加多个响应式属性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.24" data-path="../VUE/表单编辑器.html">
+            
+                <a href="../VUE/表单编辑器.html">
+            
+                    
+                    表单编辑器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.25" data-path="../VUE/监听浏览器返回.html">
+            
+                <a href="../VUE/监听浏览器返回.html">
+            
+                    
+                    监听浏览器返回
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.26" data-path="../VUE/循环中使用computed属性提升性能.html">
+            
+                <a href="../VUE/循环中使用computed属性提升性能.html">
+            
+                    
+                    循环中使用computed属性提升性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.27" data-path="../VUE/流文件预览pdf.html">
+            
+                <a href="../VUE/流文件预览pdf.html">
+            
+                    
+                    流文件预览pdf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.28" data-path="../VUE/设置responseType为blob后台返回json的处理.html">
+            
+                <a href="../VUE/设置responseType为blob后台返回json的处理.html">
+            
+                    
+                    设置responseType为blob后台返回json的处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.29" data-path="../VUE/history模式打包部署后页面刷新报错.html">
+            
+                <a href="../VUE/history模式打包部署后页面刷新报错.html">
+            
+                    
+                    history模式打包部署后页面刷新报错
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.30" data-path="../VUE/webpack-bundle-analyzer插件的使用方式.html">
+            
+                <a href="../VUE/webpack-bundle-analyzer插件的使用方式.html">
+            
+                    
+                    webpack-bundle-analyzer插件的使用方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.31" data-path="../VUE/vue-cli安装成功无法查看版本.html">
+            
+                <a href="../VUE/vue-cli安装成功无法查看版本.html">
+            
+                    
+                    vue-cli安装成功无法查看版本
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    JS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="变量提升.html">
+            
+                <a href="变量提升.html">
+            
+                    
+                    变量提升
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="列表导出excel.html">
+            
+                <a href="列表导出excel.html">
+            
+                    
+                    列表导出excel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="自定义元素.html">
+            
+                <a href="自定义元素.html">
+            
+                    
+                    自定义元素
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="移动端copy.html">
+            
+                <a href="移动端copy.html">
+            
+                    
+                    移动端copy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="H5唤起天猫App.html">
+            
+                <a href="H5唤起天猫App.html">
+            
+                    
+                    H5唤起天猫App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="自定义事件.html">
+            
+                <a href="自定义事件.html">
+            
+                    
+                    自定义事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="防抖和节流.html">
+            
+                <a href="防抖和节流.html">
+            
+                    
+                    js防抖和节流
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="正则截取字符串.html">
+            
+                <a href="正则截取字符串.html">
+            
+                    
+                    正则截取字符串
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.9" data-path="系统端口使用情况.html">
+            
+                <a href="系统端口使用情况.html">
+            
+                    
+                    系统端口使用情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.10" data-path="首字母转换为大写或小写.html">
+            
+                <a href="首字母转换为大写或小写.html">
+            
+                    
+                    首字母转换为大写或小写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.11" data-path="判断元素在区域内是否可见.html">
+            
+                <a href="判断元素在区域内是否可见.html">
+            
+                    
+                    判断元素在区域内是否可见
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.12" data-path="base64前缀.html">
+            
+                <a href="base64前缀.html">
+            
+                    
+                    base64前缀
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.13" data-path="复杂层次json数组数据处理.html">
+            
+                <a href="复杂层次json数组数据处理.html">
+            
+                    
+                    复杂层次json数组数据处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.14" data-path="严格模式下重复的定时器.html">
+            
+                <a href="严格模式下重复的定时器.html">
+            
+                    
+                    严格模式下重复的定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.15" data-path="百度地图json生成地址.html">
+            
+                <a href="百度地图json生成地址.html">
+            
+                    
+                    百度地图json生成地址
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.16" data-path="setTimeout第三参数.html">
+            
+                <a href="setTimeout第三参数.html">
+            
+                    
+                    setTimeout第三参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.17" data-path="监测元素属性变化.html">
+            
+                <a href="监测元素属性变化.html">
+            
+                    
+                    监测元素属性变化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.18" data-path="日期格式化封装.html">
+            
+                <a href="日期格式化封装.html">
+            
+                    
+                    日期格式化封装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.19" data-path="模块化.html">
+            
+                <a href="模块化.html">
+            
+                    
+                    模块化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.20" data-path="汉字转英文姓名.html">
+            
+                <a href="汉字转英文姓名.html">
+            
+                    
+                    汉字转英文姓名
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.21" data-path="浮点数的加减乘除.html">
+            
+                <a href="浮点数的加减乘除.html">
+            
+                    
+                    浮点数的加减乘除
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.22" data-path="office文件在线预览.html">
+            
+                <a href="office文件在线预览.html">
+            
+                    
+                    office文件在线预览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.23" data-path="js实现HTML转换成图片.html">
+            
+                <a href="js实现HTML转换成图片.html">
+            
+                    
+                    js实现HTML转换成图片
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.24" data-path="js对url进行编码和解码（三种方式区别）.html">
+            
+                <a href="js对url进行编码和解码（三种方式区别）.html">
+            
+                    
+                    js对url进行编码和解码（三种方式区别）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.25" data-path="谷歌浏览器关闭同源策略.html">
+            
+                <a href="谷歌浏览器关闭同源策略.html">
+            
+                    
+                    谷歌浏览器关闭同源策略
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.26" data-path="js文本比较.html">
+            
+                <a href="js文本比较.html">
+            
+                    
+                    js文本比较
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.27" data-path="二进制、十进制转换.html">
+            
+                <a href="二进制、十进制转换.html">
+            
+                    
+                    二进制、十进制转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.28" data-path="js闭包.html">
+            
+                <a href="js闭包.html">
+            
+                    
+                    js闭包
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.29" data-path="查看页面dom节点数.html">
+            
+                <a href="查看页面dom节点数.html">
+            
+                    
+                    查看页面dom节点数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.30" data-path="判断变量的数据类型.html">
+            
+                <a href="判断变量的数据类型.html">
+            
+                    
+                    判断变量的数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.31" data-path="流文件图片显示.html">
+            
+                <a href="流文件图片显示.html">
+            
+                    
+                    流文件图片显示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.32" data-path="生成全局唯一标识符.html">
+            
+                <a href="生成全局唯一标识符.html">
+            
+                    
+                    生成全局唯一标识符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.33" data-path="深拷贝.html">
+            
+                <a href="深拷贝.html">
+            
+                    
+                    深拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.34" data-path="位运算符.html">
+            
+                <a href="位运算符.html">
+            
+                    
+                    位运算符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.35" data-path="处理iframe内存泄漏.html">
+            
+                <a href="处理iframe内存泄漏.html">
+            
+                    
+                    处理iframe内存泄漏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.36" data-path="JS装X指南.html">
+            
+                <a href="JS装X指南.html">
+            
+                    
+                    JS装X指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    ElementUI
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../ElementUI/设置表格的单元格超出两行才省略并出tip.html">
+            
+                <a href="../ElementUI/设置表格的单元格超出两行才省略并出tip.html">
+            
+                    
+                    设置表格的单元格超出两行才省略并出tip
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../ElementUI/v-if切换显示table由于列数不一致报错解决.html">
+            
+                <a href="../ElementUI/v-if切换显示table由于列数不一致报错解决.html">
+            
+                    
+                    v-if切换显示table由于列数不一致报错解决
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../ElementUI/element组件绑定的方法传递自定义参数.html">
+            
+                <a href="../ElementUI/element组件绑定的方法传递自定义参数.html">
+            
+                    
+                    element组件绑定的方法传递自定义参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../ElementUI/表格组件滚动条置顶.html">
+            
+                <a href="../ElementUI/表格组件滚动条置顶.html">
+            
+                    
+                    表格组件滚动条置顶
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    TypeScript
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../TypeScript/ts-node.html">
+            
+                <a href="../TypeScript/ts-node.html">
+            
+                    
+                    ts-node
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../TypeScript/private、public、protected.html">
+            
+                <a href="../TypeScript/private、public、protected.html">
+            
+                    
+                    private、public、protected
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../TypeScript/tsconfig.html">
+            
+                <a href="../TypeScript/tsconfig.html">
+            
+                    
+                    tsconfig.json
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../TypeScript/基础类型.html">
+            
+                <a href="../TypeScript/基础类型.html">
+            
+                    
+                    基础类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../TypeScript/ts初探.html">
+            
+                <a href="../TypeScript/ts初探.html">
+            
+                    
+                    ts初探
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../TypeScript/typedoc.html">
+            
+                <a href="../TypeScript/typedoc.html">
+            
+                    
+                    typedoc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../TypeScript/笔记.html">
+            
+                <a href="../TypeScript/笔记.html">
+            
+                    
+                    笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../TypeScript/学习资料.html">
+            
+                <a href="../TypeScript/学习资料.html">
+            
+                    
+                    学习资料
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    NPM
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../NPM/npm设置和查看仓库源.html">
+            
+                <a href="../NPM/npm设置和查看仓库源.html">
+            
+                    
+                    npm设置和查看仓库源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../NPM/npm发布包到私服.html">
+            
+                <a href="../NPM/npm发布包到私服.html">
+            
+                    
+                    npm发布包到私服
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    日常笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../日常笔记/2022-02.html">
+            
+                <a href="../日常笔记/2022-02.html">
+            
+                    
+                    2022-02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../日常笔记/2022-01.html">
+            
+                <a href="../日常笔记/2022-01.html">
+            
+                    
+                    2022-01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../日常笔记/2021-12.html">
+            
+                <a href="../日常笔记/2021-12.html">
+            
+                    
+                    2021-12
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../日常笔记/2021-11.html">
+            
+                <a href="../日常笔记/2021-11.html">
+            
+                    
+                    2021-11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../日常笔记/2021-10.html">
+            
+                <a href="../日常笔记/2021-10.html">
+            
+                    
+                    2021-10
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../日常笔记/2021-08.html">
+            
+                <a href="../日常笔记/2021-08.html">
+            
+                    
+                    2021-08
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../日常笔记/2021-07.html">
+            
+                <a href="../日常笔记/2021-07.html">
+            
+                    
+                    2021-07
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../日常笔记/2021-02.html">
+            
+                <a href="../日常笔记/2021-02.html">
+            
+                    
+                    2021-02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../日常笔记/2020-12.html">
+            
+                <a href="../日常笔记/2020-12.html">
+            
+                    
+                    2020-12
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" data-path="../日常笔记/2020-11.html">
+            
+                <a href="../日常笔记/2020-11.html">
+            
+                    
+                    2020-11
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../日常笔记/2020-10.html">
+            
+                <a href="../日常笔记/2020-10.html">
+            
+                    
+                    2020-10
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../日常笔记/2020-07.html">
+            
+                <a href="../日常笔记/2020-07.html">
+            
+                    
+                    2020-07
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../日常笔记/2020-06.html">
+            
+                <a href="../日常笔记/2020-06.html">
+            
+                    
+                    2020-06
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../日常笔记/2020-05.html">
+            
+                <a href="../日常笔记/2020-05.html">
+            
+                    
+                    2020-05
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../日常笔记/2020-04.html">
+            
+                <a href="../日常笔记/2020-04.html">
+            
+                    
+                    2020-04
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.16" data-path="../日常笔记/2020-03.html">
+            
+                <a href="../日常笔记/2020-03.html">
+            
+                    
+                    2020-03
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.17" data-path="../日常笔记/2020-02.html">
+            
+                <a href="../日常笔记/2020-02.html">
+            
+                    
+                    2020-02
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.18" data-path="../日常笔记/2020-01.html">
+            
+                <a href="../日常笔记/2020-01.html">
+            
+                    
+                    2020-01
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.19" data-path="../日常笔记/2019-12.html">
+            
+                <a href="../日常笔记/2019-12.html">
+            
+                    
+                    2019-12
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.20" data-path="../日常笔记/2019-11.html">
+            
+                <a href="../日常笔记/2019-11.html">
+            
+                    
+                    2019-11
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" >
+            
+                <span>
+            
+                    
+                    ES6
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../ES6/promise并发.html">
+            
+                <a href="../ES6/promise并发.html">
+            
+                    
+                    promise并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../ES6/class、继承笔记.html">
+            
+                <a href="../ES6/class、继承笔记.html">
+            
+                    
+                    class、继承笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../ES6/var、let、const的区别.html">
+            
+                <a href="../ES6/var、let、const的区别.html">
+            
+                    
+                    var、let、const的区别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../ES6/Module.html">
+            
+                <a href="../ES6/Module.html">
+            
+                    
+                    Module
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" >
+            
+                <span>
+            
+                    
+                    GIT命令
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../GIT命令/GIT命令.html">
+            
+                <a href="../GIT命令/GIT命令.html">
+            
+                    
+                    GIT命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../GIT命令/GIT忽略文件名大小写.html">
+            
+                <a href="../GIT命令/GIT忽略文件名大小写.html">
+            
+                    
+                    GIT忽略文件名大小写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../GIT命令/Github官网访问慢处理.html">
+            
+                <a href="../GIT命令/Github官网访问慢处理.html">
+            
+                    
+                    Github官网访问慢处理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" >
+            
+                <span>
+            
+                    
+                    CSS
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../CSS/filter-滤镜.html">
+            
+                <a href="../CSS/filter-滤镜.html">
+            
+                    
+                    filter-滤镜
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" >
+            
+                <span>
+            
+                    
+                    IndexDb
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../IndexDb/基本概念.html">
+            
+                <a href="../IndexDb/基本概念.html">
+            
+                    
+                    基本概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" >
+            
+                <span>
+            
+                    
+                    Nginx配置
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Nginx配置/设置文件永远不从缓存读取.html">
+            
+                <a href="../Nginx配置/设置文件永远不从缓存读取.html">
+            
+                    
+                    设置文件永远不从缓存读取
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Nginx配置/页面刷新404.html">
+            
+                <a href="../Nginx配置/页面刷新404.html">
+            
+                    
+                    页面刷新404
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Nginx配置/开启gzip.html">
+            
+                <a href="../Nginx配置/开启gzip.html">
+            
+                    
+                    开启gzip
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" >
+            
+                <span>
+            
+                    
+                    Webpack学习
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../Webpack学习/打包优化.html">
+            
+                <a href="../Webpack学习/打包优化.html">
+            
+                    
+                    打包优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../Webpack学习/Webpack核心.html">
+            
+                <a href="../Webpack学习/Webpack核心.html">
+            
+                    
+                    Webpack核心
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" >
+            
+                <span>
+            
+                    
+                    前端算法与数据结构
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../前端算法与数据结构/课堂笔记.html">
+            
+                <a href="../前端算法与数据结构/课堂笔记.html">
+            
+                    
+                    课堂笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" >
+            
+                <span>
+            
+                    
+                    linux
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../linux/linux学习.html">
+            
+                <a href="../linux/linux学习.html">
+            
+                    
+                    linux学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../linux/shell命令学习.html">
+            
+                <a href="../linux/shell命令学习.html">
+            
+                    
+                    shell命令学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../linux/linux系统为什么安全.html">
+            
+                <a href="../linux/linux系统为什么安全.html">
+            
+                    
+                    linux系统为什么安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" >
+            
+                <span>
+            
+                    
+                    学习资料
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../学习资料/技术书籍电子书.html">
+            
+                <a href="../学习资料/技术书籍电子书.html">
+            
+                    
+                    技术书籍电子书
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../学习资料/常用工具链接.html">
+            
+                <a href="../学习资料/常用工具链接.html">
+            
+                    
+                    常用工具链接
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" >
+            
+                <span>
+            
+                    
+                    高级编程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../高级编程/笔记.html">
+            
+                <a href="../高级编程/笔记.html">
+            
+                    
+                    笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" >
+            
+                <span>
+            
+                    
+                    gitbook
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../gitbook/gitbook.html">
+            
+                <a href="../gitbook/gitbook.html">
+            
+                    
+                    gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" >
+            
+                <span>
+            
+                    
+                    vue源码学习笔记
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.1" data-path="../vue源码学习笔记/目录结构.html">
+            
+                <a href="../vue源码学习笔记/目录结构.html">
+            
+                    
+                    目录结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.2" data-path="../vue源码学习笔记/构建过程.html">
+            
+                <a href="../vue源码学习笔记/构建过程.html">
+            
+                    
+                    构建过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.3" data-path="../vue源码学习笔记/代码风格.html">
+            
+                <a href="../vue源码学习笔记/代码风格.html">
+            
+                    
+                    代码风格
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" >
+            
+                <span>
+            
+                    
+                    sass
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.1" data-path="../sass/安装 SASS不成功的解决办法.html">
+            
+                <a href="../sass/安装 SASS不成功的解决办法.html">
+            
+                    
+                    安装 SASS不成功的解决办法
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.22" >
+            
+                <span>
+            
+                    
+                    nodejs
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.22.1" data-path="../nodejs/nodejs服务端开发.html">
+            
+                <a href="../nodejs/nodejs服务端开发.html">
+            
+                    
+                    nodejs服务端开发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.23" >
+            
+                <span>
+            
+                    
+                    nexus私服搭建与使用
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.23.1" data-path="../nexus设置npm下载管理/nexus私服搭建与使用.html">
+            
+                <a href="../nexus设置npm下载管理/nexus私服搭建与使用.html">
+            
+                    
+                    nexus设置npm下载管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24" >
+            
+                <span>
+            
+                    
+                    vue3
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.24.1" data-path="../vue3/ref、reactive、toRef、toRefs.html">
+            
+                <a href="../vue3/ref、reactive、toRef、toRefs.html">
+            
+                    
+                    ref、reactive、toRef、toRefs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.24.2" data-path="../vue3/vite构建vue3.html">
+            
+                <a href="../vue3/vite构建vue3.html">
+            
+                    
+                    vite构建vue3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.25" >
+            
+                <span>
+            
+                    
+                    koa
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.25.1" data-path="../koa/koa学习笔记.html">
+            
+                <a href="../koa/koa学习笔记.html">
+            
+                    
+                    koa学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.26" >
+            
+                <span>
+            
+                    
+                    Eslint
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.26.1" data-path="../Eslint/Eslint学习笔记.html">
+            
+                <a href="../Eslint/Eslint学习笔记.html">
+            
+                    
+                    Eslint学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.27" >
+            
+                <span>
+            
+                    
+                    MongoDB
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.27.1" data-path="../MongoDB/MongoDB学习笔记.html">
+            
+                <a href="../MongoDB/MongoDB学习笔记.html">
+            
+                    
+                    MongoDB学习笔记
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.28" >
+            
+                <span>
+            
+                    
+                    vscode
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.28.1" data-path="../vscode/task.html">
+            
+                <a href="../vscode/task.html">
+            
+                    
+                    task
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >复杂层次json数组数据处理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h3 id="&#x590D;&#x6742;&#x5C42;&#x6B21;json&#x6570;&#x7EC4;&#x6570;&#x636E;&#x5904;&#x7406;">&#x590D;&#x6742;&#x5C42;&#x6B21;json&#x6570;&#x7EC4;&#x6570;&#x636E;&#x5904;&#x7406;</h3>
+<p>&#x4F7F;&#x7528;JSON.stringify&#x65B9;&#x6CD5;&#x7684;&#x7B2C;&#x4E8C;&#x53C2;&#x6570;(&#x4F20;&#x5165;&#x51FD;&#x6570;)&#x5B9E;&#x73B0;</p>
+<pre><code>// &#x6570;&#x636E;&#x6E90;
+let pageData =  {
+        &apos;requisition&apos;: {},
+        &apos;ris_study&apos;: {
+          &apos;ACCURATE&apos;: &apos;MA==&apos;,
+          &apos;ACCURATEIMAGE&apos;: &apos;MA==&apos;,
+          &apos;AIFLAG&apos;: &apos;MA==&apos;,
+          &apos;AISUMMARY&apos;: &apos;MA==&apos;,
+          &apos;ALLERGICHISTORY&apos;: &apos;LTE=&apos;,
+          &apos;APPHOSPITAL&apos;: &apos;5pys6Zmi&apos;,
+          &apos;APPLYDEPARTMENT&apos;: &apos;5pmu6YCa5aSW56eR5LqM55eF5oi/&apos;,
+          &apos;APPLYDOCTOR&apos;: &apos;MjAyMC81LzEzIDE1OjE2OjA3&apos;,
+          &apos;APPOINTMENTFLAG&apos;: &apos;MA==&apos;,
+          &apos;BURN_CD_STATE&apos;: &apos;MA==&apos;,
+          &apos;BURN_CD_USER&apos;: &apos;MA==&apos;,
+          &apos;CLINICALINFO&apos;: &apos;MA==&apos;,
+          &apos;CONSULTATIONFLAG&apos;: &apos;MQ==&apos;,
+          &apos;DBID&apos;: &apos;MTAzNw==&apos;,
+          &apos;DB_SYN_MARK&apos;: &apos;MTAzNw==&apos;,
+          &apos;DEPARTMENTID&apos;: &apos;MQ==&apos;,
+          &apos;DEPTSTUDYID&apos;: &apos;QmQyMDA1MDYwMDAy&apos;,
+          &apos;DEVICENAME&apos;: &apos;5rS75L2T57uE57uH5qOA5p+l&apos;,
+          &apos;DEVICETYPENAME&apos;: &apos;57uE57uH5a2m&apos;,
+          &apos;DISABLEFLAG&apos;: &apos;MA==&apos;,
+          &apos;DOCTORID1&apos;: &apos;Ymw=&apos;,
+          &apos;DOCTORID2&apos;: &apos;Ymw=&apos;,
+          &apos;DOCTORID3&apos;: &apos;Ymw=&apos;,
+          &apos;DOCTORID4&apos;: &apos;Ymw=&apos;,
+          &apos;DOCTORID5&apos;: &apos;Ymw=&apos;,
+          &apos;DOCTORID6&apos;: &apos;Ymw=&apos;,
+          &apos;DOCTORTIME1&apos;: &apos;MA==&apos;,
+          &apos;DOCTORTIME2&apos;: &apos;MA==&apos;,
+          &apos;DOCTORTIME3&apos;: &apos;MA==&apos;,
+          &apos;DOCTORTIME4&apos;: &apos;MA==&apos;,
+          &apos;DOCTORTIME5&apos;: &apos;MA==&apos;,
+          &apos;DOCTORTIME6&apos;: &apos;MA==&apos;,
+          &apos;DSTUDYUID&apos;: &apos;MQ==&apos;,
+          &apos;EMERGENCYFLAG&apos;: &apos;MA==&apos;,
+          &apos;EXPOSURESTATUS&apos;: &apos;MA==&apos;,
+          &apos;FEETYPE&apos;: &apos;LTE=&apos;,
+          &apos;FILMSTATE&apos;: &apos;MA==&apos;,
+          &apos;FOLLOWUPSTATE&apos;: &apos;MA==&apos;,
+          &apos;FREEZENUMBER&apos;: &apos;MA==&apos;,
+          &apos;HISAPPLICATIONID&apos;: &apos;MA==&apos;,
+          &apos;HOSPITALID&apos;: &apos;MA==&apos;,
+          &apos;HPVNUMBER&apos;: &apos;MA==&apos;,
+          &apos;IFQA&apos;: &apos;MjAyMC81LzYgMTU6NDA6MzM=&apos;,
+          &apos;IMAGECOUNT&apos;: &apos;MA==&apos;,
+          &apos;INFECTIONFLAG&apos;: &apos;MA==&apos;,
+          &apos;LASTMENSESDATE&apos;: &apos;MjAyMC81LzYgMTU6Mjk6Mjc=&apos;,
+          &apos;LOCKFLAG&apos;: &apos;MQ==&apos;,
+          &apos;LOCKUSERID&apos;: &apos;Ymw=&apos;,
+          &apos;MAINXEGUID&apos;: &apos;MA==&apos;,
+          &apos;MENOPAUSEFLAG&apos;: &apos;MjAyMC81LzYgMTU6Mjk6Mjc=&apos;,
+          &apos;MPPSINSTANCEUID&apos;: &apos;MA==&apos;,
+          &apos;NAKEDEYESEE&apos;: &apos;5Lq65pyJ5LiJ5oCl&apos;,
+          &apos;OPERATETIME&apos;: &apos;MjAyMC81LzEzIDE1OjE2OjEw&apos;,
+          &apos;OPERATORID&apos;: &apos;Ymw=&apos;,
+          &apos;ORDERNUMBER&apos;: &apos;MA==&apos;,
+          &apos;PATIENTADDRESS&apos;: &apos;5aWz&apos;,
+          &apos;PATIENTAGE&apos;: &apos;MzQ=&apos;,
+          &apos;PATIENTAGEUNIT&apos;: &apos;5bKB&apos;,
+          &apos;PATIENTBIRTHDAY&apos;: &apos;MTk4Ni8xLzE=&apos;,
+          &apos;PATIENTENAME&apos;: &apos;QklORyBMSSBDRSBTSEk=&apos;,
+          &apos;PATIENTFOLK&apos;: &apos;5rGJ5peP&apos;,
+          &apos;PATIENTHEIGHT&apos;: &apos;MA==&apos;,
+          &apos;PATIENTIDNUMBER&apos;: &apos;5aWz&apos;,
+          &apos;PATIENTINPATIENTID&apos;: &apos;MjMxMjMxMjM=&apos;,
+          &apos;PATIENTNAME&apos;: &apos;55eF55CG5rWL6K+V&apos;,
+          &apos;PATIENTOUTPATIENTID&apos;: &apos;5L2P6Zmi&apos;,
+          &apos;PATIENTPHONENUMBER&apos;: &apos;5aWz&apos;,
+          &apos;PATIENTSEX&apos;: &apos;5aWz&apos;,
+          &apos;PATIENTSICKBED&apos;: &apos;5rGJ5peP&apos;,
+          &apos;PATIENTSICKROOM&apos;: &apos;5rGJ5peP&apos;,
+          &apos;PATIENTTYPENAME&apos;: &apos;5L2P6Zmi&apos;,
+          &apos;PATIENTUID&apos;: &apos;MQ==&apos;,
+          &apos;PATIENTWEIGHT&apos;: &apos;MA==&apos;,
+          &apos;PERFORMINGPHYSICIANNAME&apos;: &apos;MA==&apos;,
+          &apos;POSITIVEFLAG&apos;: &apos;MQ==&apos;,
+          &apos;PRIORFLAG&apos;: &apos;MA==&apos;,
+          &apos;QUEUEID&apos;: &apos;5Y6f5aeL&apos;,
+          &apos;QUEUENO&apos;: &apos;MA==&apos;,
+          &apos;READIMAGEFLAG&apos;: &apos;MA==&apos;,
+          &apos;RECEIVESAMPLETIME&apos;: &apos;MjAyMC81LzYgMTU6Mjk6Mjc=&apos;,
+          &apos;REFUSEFLAG&apos;: &apos;MA==&apos;,
+          &apos;REFUSEREASON&apos;: &apos;MA==&apos;,
+          &apos;REGISTERTIME&apos;: &apos;MjAyMC81LzYgMTU6NDA6MzM=&apos;,
+          &apos;REGTIME4CENTER&apos;: &apos;MjAyMC81LzYgMTU6NDA6MzM=&apos;,
+          &apos;REMARK&apos;: &apos;MjAyMC81LzEzIDE1OjE2OjEw&apos;,
+          &apos;REPORTADVICE&apos;: &apos;6IK65pyq5YiG5YyW5aSn57uG6IOe55mM44CCDQoNCg==&apos;,
+          &apos;REPORTDESC&apos;: &apos;5aSn5L2TOuiCuue7hOe7hyAxNmNteCAxMmNteCA1Y23vvIzliIfpnaLot53ogrrpl6ggM2Nt5aSE5pyJ5LiAIDbvvI41Y20gWCAzLjVjbSBYIDIuNWNt6IK/54mp77yM5pyJ57qk57u057uE57uH5YyF57uV77yM55WM6ZmQ5riF5qWa77yM6IK/54mp6Imy5omA57qi77yM6LSo6L6D6L2v77yM5Lit5aSu5Z2P5q2744CCDQoNCumVnOajgO+8mueZjOe7huiDnuaOkuWIl+aIkOeJh+eKtuOAgeS5s+WktOeKtuOAgeW3oueKtu+8jOeZjOe7huiDnuS9k+enr+i+g+Wkp++8jOacieaYjuaYvuW8guWei+aAp++8jOe7huiDnuWkp+WkmuaVsOWRiOWkmui+ueW9ouaIluWchuW9ou+8jOiDnua1huS4sOWvjO+8jOaguOWkp++8jOacieaYjuaYvuaguOS7ge+8jOWPr+ingeWNleaguOWPiuWkmuaguOeYpOW3qOe7huiDnu+8jOaguOWIhuijguixoeWkmuinge+8jOacieWdj+atu++8jOeYpOe7huiDnuaXouS4jeWFt+aciemznueZjOe7huiDnueahOinkuWMluePoOaIlue7huiDnumXtOahpe+8jOS5n+aXoOiFuueZjOeahOiFuuiFlOe7k+aehOaIluS6p+eUn+eymOa2suOAgg0KDQo=&apos;,
+          &apos;REPORTDIAGNOSE&apos;: &apos;6IK65pyq5YiG5YyW5aSn57uG6IOe55mM44CCDQoNCg==&apos;,
+          &apos;REPORTSIGNATURE&apos;: &apos;MA==&apos;,
+          &apos;REPORTTIME&apos;: &apos;MjAyMC81LzEzIDE1OjE2OjA3&apos;,
+          &apos;RPTPRINTFLAG&apos;: &apos;MA==&apos;,
+          &apos;RPTVERIFIEDTIME&apos;: &apos;MA==&apos;,
+          &apos;RPTWRITTENTIME&apos;: &apos;MA==&apos;,
+          &apos;SAMPLEACCEPTDOCTOR&apos;: &apos;5Y6f5aeL&apos;,
+          &apos;SAMPLECONDITION&apos;: &apos;5ZCI5qC8&apos;,
+          &apos;SAMPLEINFO&apos;: &apos;MA==&apos;,
+          &apos;SAMPLEINPUTPERSON&apos;: &apos;6ZSQ6L6+5aec5ree&apos;,
+          &apos;SAMPLEREMAINDERDESC&apos;: &apos;5bi46KeE5L+d55WZ&apos;,
+          &apos;SAMPLEREMAINDERLOC&apos;: &apos;MzM=&apos;,
+          &apos;SAMPLETYPE&apos;: &apos;5Y6f5aeL&apos;,
+          &apos;SAMPLEUNFITREASON&apos;: &apos;5ZCI5qC8&apos;,
+          &apos;SCHEDULEDTIME&apos;: &apos;MA==&apos;,
+          &apos;SOCIETYID&apos;: &apos;MA==&apos;,
+          &apos;STUDYCOMMENT&apos;: &apos;MA==&apos;,
+          &apos;STUDYDESCRIBE&apos;: &apos;5rS75L2T57uE57uH5qOA5p+l&apos;,
+          &apos;STUDYID&apos;: &apos;QkwyMDA1MDYwMDAx&apos;,
+          &apos;STUDYSTATUS&apos;: &apos;NzA=&apos;,
+          &apos;STUDYTIME&apos;: &apos;MjAyMC81LzYgMTU6Mjk6Mjc=&apos;,
+          &apos;TEMPSAVEFLAG&apos;: &apos;MA==&apos;,
+          &apos;TOTALFEE&apos;: &apos;MA==&apos;,
+          &apos;USERCERT&apos;: &apos;MA==&apos;,
+          &apos;VIPFLAG&apos;: &apos;MA==&apos;,
+          &apos;VIRUS&apos;: &apos;5Y6f5aeL&apos;,
+          &apos;WORKINGCOMPANY&apos;: &apos;5Y6f5aeL&apos;,
+          &apos;WRITERPERCENT&apos;: &apos;MA==&apos;,
+          &apos;XEGUID&apos;: &apos;MDk5MzczMENDQUFENEVCNDk1QjgxREMxQkE1NUU1MTM=&apos;
+        },
+        &apos;studyproperty&apos;: {},
+        &apos;SampleInfo&apos;: [
+          {
+            &apos;XEGUID&apos;: &apos;MDk5MzczMENDQUFENEVCNDk1QjgxREMxQkE1NUU1MTM=&apos;,
+            &apos;SAMPLEGUID&apos;: &apos;NjUxOTA3RTQxQTgyNEI2MEIyQzM4REQyOUUxRjM3RUE=&apos;,
+            &apos;SAMPLETYPE&apos;: &apos;5bi46KeE&apos;,
+            &apos;SAMPLENUMBER&apos;: &apos;MDE=&apos;,
+            &apos;SAMPLEPART&apos;: &apos;6IK/54mp5Y+K5ZGo6L65&apos;,
+            &apos;PARTCOUNT&apos;: &apos;Mg==&apos;,
+            &apos;PARTUNIT&apos;: &apos;5Z2X&apos;,
+            &apos;OPERATORID&apos;: &apos;55eF55CG5Yy755Sf&apos;,
+            &apos;OPERATETIME&apos;: &apos;MjAyMC81LzYgMTg6Mzk6MDM=&apos;,
+            &apos;DISABLEFLAG&apos;: &apos;MA==&apos;,
+            &apos;SAMPLECOMMENT&apos;: &apos;5raI5oGv&apos;,
+            &apos;SAMPLESTATE&apos;: &apos;MzA=&apos;,
+            &apos;CONFIRMUSERID&apos;: &apos;55eF55CG5Yy755Sf&apos;,
+            &apos;CONFIRMTIME&apos;: &apos;MjAyMC81LzYgMTg6NDA6MjY=&apos;,
+            &apos;EMBEDDINGUSERID&apos;: &apos;55eF55CG5Yy755Sf&apos;,
+            &apos;EMBEDDINGTIME&apos;: &apos;MjAyMC81LzYgMTg6NDA6MzE=&apos;,
+            &apos;FILEOPERATORID&apos;: &apos;MjAyMC81LzYgMTg6NDA6MzE=&apos;,
+            &apos;FILEOPERATETIME&apos;: &apos;MjAyMC81LzYgMTg6NDA6MzE=&apos;,
+            &apos;FILEPOSTION&apos;: &apos;MjAyMC81LzYgMTg6NDA6MzE=&apos;,
+            &apos;FILESAVEFLAG&apos;: &apos;MjAyMC81LzYgMTg6NDA6MzE=&apos;,
+            &apos;OPERATORNAME&apos;: &apos;MjAyMC81LzYgMTg6NDA6MzE=&apos;,
+            &apos;SLICECOUNT&apos;: &apos;Ng==&apos;
+          },
+          {
+            &apos;XEGUID&apos;: &apos;MDk5MzczMENDQUFENEVCNDk1QjgxREMxQkE1NUU1MTM=&apos;,
+            &apos;SAMPLEGUID&apos;: &apos;RDA1MjZBNTYyM0NCNDhDRjhBRUJEQzg4QTE5NkE1NEY=&apos;,
+            &apos;SAMPLETYPE&apos;: &apos;5bi46KeE&apos;,
+            &apos;SAMPLENUMBER&apos;: &apos;MDI=&apos;,
+            &apos;SAMPLEPART&apos;: &apos;6YCB5qOA5LiL5YiH57q/&apos;,
+            &apos;PARTCOUNT&apos;: &apos;MQ==&apos;,
+            &apos;PARTUNIT&apos;: &apos;5Z2X&apos;,
+            &apos;OPERATORID&apos;: &apos;55eF55CG5Yy755Sf&apos;,
+            &apos;OPERATETIME&apos;: &apos;MjAyMC81LzYgMTg6Mzk6MDM=&apos;,
+            &apos;DISABLEFLAG&apos;: &apos;MA==&apos;,
+            &apos;SAMPLECOMMENT&apos;: &apos;MA==&apos;,
+            &apos;SAMPLESTATE&apos;: &apos;MjA=&apos;,
+            &apos;CONFIRMUSERID&apos;: &apos;55eF55CG5Yy755Sf&apos;,
+            &apos;CONFIRMTIME&apos;: &apos;MjAyMC81LzYgMTg6NDA6MjY=&apos;,
+            &apos;EMBEDDINGUSERID&apos;: &apos;55eF55CG5Yy755Sf&apos;,
+            &apos;EMBEDDINGTIME&apos;: &apos;MjAyMC81LzYgMTg6NDA6MzE=&apos;,
+            &apos;FILEOPERATORID&apos;: &apos;55eF55CG5Yy755Sf&apos;,
+            &apos;FILEOPERATETIME&apos;: &apos;MjAyMC81LzEzIDEwOjU0OjEz&apos;,
+            &apos;FILEPOSTION&apos;: &apos;MDItMzM=&apos;,
+            &apos;FILESAVEFLAG&apos;: &apos;MQ==&apos;,
+            &apos;OPERATORNAME&apos;: &apos;MQ==&apos;,
+            &apos;SLICECOUNT&apos;: &apos;MQ==&apos;
+          },
+          {
+            &apos;XEGUID&apos;: &apos;MDk5MzczMENDQUFENEVCNDk1QjgxREMxQkE1NUU1MTM=&apos;,
+            &apos;SAMPLEGUID&apos;: &apos;QTQ4MjhCRjgyMEUyNDU3QkFGMkM4QzY0MTlFQjdFMDk=&apos;,
+            &apos;SAMPLETYPE&apos;: &apos;5bi46KeE&apos;,
+            &apos;SAMPLENUMBER&apos;: &apos;MDM=&apos;,
+            &apos;SAMPLEPART&apos;: &apos;5Lmz5aS0&apos;,
+            &apos;PARTCOUNT&apos;: &apos;Mg==&apos;,
+            &apos;PARTUNIT&apos;: &apos;5Z2X&apos;,
+            &apos;OPERATORID&apos;: &apos;55eF55CG5Yy755Sf&apos;,
+            &apos;OPERATETIME&apos;: &apos;MjAyMC81LzYgMTg6NTY6MDI=&apos;,
+            &apos;DISABLEFLAG&apos;: &apos;MA==&apos;,
+            &apos;SAMPLECOMMENT&apos;: &apos;MA==&apos;,
+            &apos;SAMPLESTATE&apos;: &apos;MTA=&apos;,
+            &apos;CONFIRMUSERID&apos;: &apos;55eF55CG5Yy755Sf&apos;,
+            &apos;CONFIRMTIME&apos;: &apos;MjAyMC81LzYgMTg6NTY6NDY=&apos;,
+            &apos;EMBEDDINGUSERID&apos;: &apos;MjAyMC81LzYgMTg6NTY6NDY=&apos;,
+            &apos;EMBEDDINGTIME&apos;: &apos;MjAyMC81LzYgMTg6NTY6NDY=&apos;,
+            &apos;FILEOPERATORID&apos;: &apos;MjAyMC81LzYgMTg6NTY6NDY=&apos;,
+            &apos;FILEOPERATETIME&apos;: &apos;MjAyMC81LzYgMTg6NTY6NDY=&apos;,
+            &apos;FILEPOSTION&apos;: &apos;MjAyMC81LzYgMTg6NTY6NDY=&apos;,
+            &apos;FILESAVEFLAG&apos;: &apos;MjAyMC81LzYgMTg6NTY6NDY=&apos;,
+            &apos;OPERATORNAME&apos;: &apos;MjAyMC81LzYgMTg6NTY6NDY=&apos;,
+            &apos;SLICECOUNT&apos;: &apos;MA==&apos;
+          }
+        ],
+        &apos;DiagnoseInfo&apos;: {
+          &apos;Diagnose1&apos;: &apos;6IK65pyq5YiG5YyW5aSn57uG6IOe55mM44CCDQoNCg==&apos;,
+          &apos;Diagnose2&apos;: &apos;6IK65pyq5YiG5YyW5aSn57uG6IOe55mM44CCDQoNCg==&apos;,
+          &apos;Diagnose3&apos;: &apos;&apos;,
+          &apos;doctorname1&apos;: &apos;&#x75C5;&#x7406;&#x533B;&#x751F;&apos;,
+          &apos;doctorname2&apos;: &apos;&#x75C5;&#x7406;&#x533B;&#x751F;&apos;,
+          &apos;doctorname3&apos;: &apos;&apos;,
+        }
+      }
+// &#x9700;&#x6C42;&#xFF0C;&#x9700;&#x8981;&#x5BF9;pageData&#x6570;&#x636E;&#x4E2D;&#x6BCF;&#x4E2A;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x505A;base64&#x89E3;&#x7801;
+// &#x6309;&#x7167;&#x666E;&#x901A;&#x505A;&#x6CD5;&#x5F97;&#x5BF9;pageData&#x505A;&#x4E00;&#x5C42;&#x5C42;&#x7684;&#x5FAA;&#x73AF;&#xFF0C;&#x4F46;pageData&#x5C42;&#x6B21;&#x590D;&#x6742;&#x4E0D;&#x53EF;&#x63A7;&#xFF0C;&#x5FAA;&#x73AF;&#x4EE3;&#x7801;&#x96BE;&#x4EE5;&#x7F16;&#x5199;
+let Base64 = require(&apos;js-base64&apos;).Base64;
+pageData = JSON.parse(JSON.stringify(pageData, function (key, value) {
+    if (value &amp;&amp; typeof value === &apos;string&apos;) {
+        return Base64.decode(value);
+    } else {
+        return value;
+    }
+}));
+&#x81EA;&#x6B64;ok!
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="base64前缀.html" class="navigation navigation-prev " aria-label="Previous page: base64前缀">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="严格模式下重复的定时器.html" class="navigation navigation-next " aria-label="Next page: 严格模式下重复的定时器">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"复杂层次json数组数据处理","level":"1.4.13","depth":2,"next":{"title":"严格模式下重复的定时器","level":"1.4.14","depth":2,"path":"JS/严格模式下重复的定时器.md","ref":"JS/严格模式下重复的定时器.md","articles":[]},"previous":{"title":"base64前缀","level":"1.4.12","depth":2,"path":"JS/base64前缀.md","ref":"JS/base64前缀.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["expandable-chapters","fontsettings","sharing","lunr","search","highlight","livereload","accordion","sectionx","livereload"],"pluginsConfig":{"livereload":{},"accordion":{},"search":{},"lunr":{"ignoreSpecialCharacters":false,"maxIndexSize":1000000},"fontsettings":{"family":"sans","size":2,"theme":"white"},"sectionx":{},"highlight":{},"sharing":{"all":["facebook","google","twitter","weibo","instapaper"],"facebook":true,"google":false,"instapaper":false,"twitter":true,"vk":false,"weibo":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"JS/复杂层次json数组数据处理.md","mtime":"2020-05-20T08:32:18.569Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-02-14T04:41:37.920Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-accordion/accordionSelector.js"></script>
+        
+    
+        
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sectionx/sectionx.js"></script>
+        
+    
+
+    </body>
+</html>
+
